@@ -33,7 +33,7 @@ public class Edit extends AppCompatActivity {
 
         db = new DatabaseConnection(this);
 
-        Cursor cs = db.getSpecifiedName(Edit_products.selectedName.toString());
+        Cursor cs = db.getSpecifiedName(Edit_products.selectedName);
 
 
         while (cs.moveToNext()) {
@@ -73,5 +73,12 @@ public class Edit extends AppCompatActivity {
         alertDialog.show();
 
 
+    }
+
+
+    public void home(View view) {
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 }

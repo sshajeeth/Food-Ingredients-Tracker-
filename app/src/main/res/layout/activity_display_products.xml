@@ -9,42 +9,86 @@
     android:orientation="vertical"
     tools:context=".Display_products">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="259dp"
+        android:layout_height="166dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="76dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="215dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="46dp"
+        android:text="View Ingredients"
+        android:textAlignment="center"
+        android:textColor="@color/colorHint"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
     <Button
         android:id="@+id/add"
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
         android:layout_marginLeft="85dp"
-        android:layout_marginTop="670dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="29dp"
         android:background="@drawable/button"
         android:fontFamily="sans-serif-medium"
-        android:text="Add to kitchen"
         android:onClick="addToKitchen"
+        android:text="Add to kitchen"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        app:srcCompat="@drawable/logo"
-        android:layout_centerHorizontal="true"/>
+        android:id="@+id/imageView4"
+        android:layout_width="134dp"
+        android:layout_height="124dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="277dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:onClick="home"
+        app:srcCompat="@drawable/home" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="300dp"
-        android:layout_marginBottom="200dp"
-       >
+        android:layout_width="369dp"
+        android:layout_height="346dp"
+        android:layout_above="@+id/add"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="6dp">
 
         <LinearLayout
             android:id="@+id/linear"
             android:layout_width="match_parent"
-            android:layout_height="391dp"
-            android:layout_marginTop="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
 
-            android:layout_marginLeft="150dp"
+            android:layout_marginTop="0dp"
             android:layout_marginRight="60dp"
 
             android:orientation="vertical">

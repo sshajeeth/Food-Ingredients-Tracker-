@@ -1,32 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/sub_bg"
-    android:orientation="vertical"
-    tools:context=".Search_products">
+    tools:context=".Edit">
 
-    <SearchView
-        android:id="@+id/search"
-        android:layout_width="600dp"
-        style="@style/Widget.AppCompat.SearchView.ActionBar"
-        android:layout_height="50dp"
-        android:iconifiedByDefault="false"
-        android:queryHint="Search Here"
-        android:outlineAmbientShadowColor="@color/colorHint"
-        android:outlineSpotShadowColor="@color/colorHint"/>
-
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="10dp" />
     <TextView
-        android:id="@android:id/empty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Empty set"
-        android:textColor="@color/colorHint" />
-</LinearLayout>
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:text="Search Ingedient"
+        android:textAlignment="center"
+        android:textColor="@color/colorHint"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="369dp"
+        android:layout_height="351dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942">
+
+        <SearchView
+            android:id="@+id/search"
+            style="@style/Widget.AppCompat.SearchView"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="08dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/colorHint"
+            android:iconifiedByDefault="true"
+            android:queryHint="Search Here"
+            tools:targetApi="lollipop">
+
+        </SearchView>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="350dp"
+            android:layout_height="519dp"
+            android:layout_marginLeft="08dp"
+            android:layout_marginTop="10dp"
+            android:cacheColorHint="@color/colorHint"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="252dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="99dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home" />
+
+</android.support.constraint.ConstraintLayout>

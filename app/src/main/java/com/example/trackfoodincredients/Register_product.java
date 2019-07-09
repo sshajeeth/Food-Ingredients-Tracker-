@@ -3,6 +3,7 @@ package com.example.trackfoodincredients;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -62,6 +63,7 @@ public class Register_product extends AppCompatActivity {
                                 public void onClick(DialogInterface dialog, int which) {
                                     db.addToDB(name.getText().toString(), Double.valueOf(weight.getText().toString()),
                                             Double.valueOf(price.getText().toString()), description.getText().toString());
+                                    toastMethod("Successfully Added");
                                     startActivity(getIntent());
                                     overridePendingTransition(0, 0);
                                     name.setText("");
@@ -85,5 +87,11 @@ public class Register_product extends AppCompatActivity {
 
     public void toastMethod(String toast) {
         Toast.makeText(getApplicationContext(), toast, Toast.LENGTH_SHORT).show();
+    }
+
+    public void home(View view) {
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 }

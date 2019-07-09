@@ -61,7 +61,8 @@ public class Edit_products extends AppCompatActivity {
             onClickList.add(textView);
             linear.addView(textView);
 
-            textView.setOnClickListener(new View.OnClickListener() {
+
+textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     selectedName=textView.getText().toString();
@@ -74,41 +75,18 @@ public class Edit_products extends AppCompatActivity {
 
         }
 
-//        breakLoop: for (j=0; j<onClickList.size();j++){
-//            clicked=false;
-//
-//
-//            onClickList.get(j).setOnClickListener(new View.OnClickListener() {
-//
-//                @Override
-//                public void onClick(View v) {
-//
-//                    Intent intent = new Intent(getApplicationContext(),Edit.class);
-//                    startActivity(intent);
-//                    overridePendingTransition(0, 0);
-//                    clicked=true;
-//
-//                }
-//
-//            });
-//
-//            if (clicked){
-//
-//                break breakLoop;
-//
-//
-//            }else {
-//                index++;
-//            }
-//            count=index;
-//
-//
-//            selectedName=onClickList.get(2).getText().toString();
-//            System.out.println(count);
-//        }
+
+
+
+
 
 
     }
 
 
+    public void home(View view) {
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+    }
 }

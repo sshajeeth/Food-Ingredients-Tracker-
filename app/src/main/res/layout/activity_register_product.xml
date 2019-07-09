@@ -7,18 +7,38 @@
     android:background="@drawable/sub_bg"
     tools:context=".Register_product">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="77dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="home"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
+        app:srcCompat="@drawable/home" />
+
     <LinearLayout
-        android:layout_width="411dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="335dp"
         android:layout_height="728dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="3dp"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="1dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="250dp"
-            android:layout_height="200dp"
+            android:layout_width="245dp"
+            android:layout_height="188dp"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_marginTop="70dp"
@@ -29,9 +49,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo" />
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:fontFamily="sans-serif"
+            android:text="Register Ingredient"
+            android:textAlignment="center"
+            android:textColor="@color/colorHint"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/name"
-            android:layout_width="250dp"
+            android:layout_width="288dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
@@ -41,8 +72,8 @@
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName"
-            android:paddingBottom="19dp"
-            android:textColor="@android:color/white"
+            android:paddingBottom="22dp"
+            android:textColor="@android:color/black"
             android:textColorHint="@color/colorHint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +81,7 @@
 
         <EditText
             android:id="@+id/weight"
-            android:layout_width="250dp"
+            android:layout_width="288dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
@@ -60,8 +91,8 @@
             android:ems="10"
             android:hint="Weight"
             android:inputType="numberDecimal"
-            android:paddingBottom="19dp"
-            android:textColor="@android:color/white"
+            android:paddingBottom="22dp"
+            android:textColor="@android:color/black"
             android:textColorHint="@color/colorHint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
@@ -70,7 +101,7 @@
 
         <EditText
             android:id="@+id/price"
-            android:layout_width="250dp"
+            android:layout_width="288dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
@@ -80,8 +111,8 @@
             android:ems="10"
             android:hint="Price"
             android:inputType="number|numberDecimal"
-            android:paddingBottom="19dp"
-            android:textColor="@android:color/white"
+            android:paddingBottom="22dp"
+            android:textColor="@android:color/black"
             android:textColorHint="@color/colorHint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
@@ -90,8 +121,8 @@
 
         <EditText
             android:id="@+id/description"
-            android:layout_width="251dp"
-            android:layout_height="wrap_content"
+            android:layout_width="288dp"
+            android:layout_height="43dp"
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_marginTop="25dp"
@@ -100,8 +131,8 @@
             android:ems="10"
             android:hint="Description"
             android:inputType="textMultiLine"
-            android:paddingBottom="19dp"
-            android:textColor="@android:color/white"
+            android:paddingBottom="25dp"
+            android:textColor="@android:color/black"
             android:textColorHint="@color/colorHint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

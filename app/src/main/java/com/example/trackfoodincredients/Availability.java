@@ -1,5 +1,8 @@
 package com.example.trackfoodincredients;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.os.Build;
@@ -11,6 +14,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -62,7 +66,38 @@ public class Availability extends AppCompatActivity {
     }
 
     public void save(View view) {
+        AlertDialog.Builder confirmation = new AlertDialog.Builder(this);
+        confirmation.setTitle("Ingredients Tracker");
+        confirmation.setMessage("Are you sure to Save").setCancelable(false)
+                .setPositiveButton("Yes"
+                        , new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                toastMethod("Saved");
+                                startActivity(getIntent());
+                                overridePendingTransition(0, 0);
 
+
+                                finish();
+                            }
+                        })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alertDialog = confirmation.create();
+        alertDialog.show();
         db.updateAvailability(isCheckedList);
+    }
+
+    public void toastMethod(String toast) {
+        Toast.makeText(getApplicationContext(), toast, Toast.LENGTH_SHORT).show();
+    }
+    public void home(View view) {
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 }

@@ -96,8 +96,7 @@ public class DatabaseConnection extends SQLiteOpenHelper {
             SQLiteDatabase db = this.getWritableDatabase();
 
             String query = "select * from " + TABLE_NAME + " where "+ COL_2 + " = '" + name + "'";
-            Cursor cur = db.rawQuery(query, null);
-            return cur;
+            return db.rawQuery(query, null);
         }
 
     public void updateAll(String updateName,EditText name,EditText weight, EditText price, EditText description) {

@@ -101,4 +101,9 @@ public class Display_products extends AppCompatActivity {
     }
 
 
+    public void home(View view) {
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+    }
 }
